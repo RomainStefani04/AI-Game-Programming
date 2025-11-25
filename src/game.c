@@ -1,7 +1,7 @@
 //
 // Created by romai on 24/11/2025.
 //
-#include "game.h"
+#include "../include/game.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,14 +17,14 @@ int hole_display_number(int internal_index) {
     return internal_index + 1;
 }
 
-bool is_player_hole(int hole_index, Player player) {
+bool is_player_hole(int hole_index, PlayerIndex playerIndex) {
     if (hole_index < 0 || hole_index >= NUM_HOLES) {
         return false;
     }
 
     int display_num = hole_display_number(hole_index);
 
-    if (player == PLAYER_1) {
+    if (playerIndex == PLAYER_1) {
         return display_num % 2 == 1;  // Impair
     } else {
         return display_num % 2 == 0;  // Pair
@@ -45,7 +45,7 @@ int get_total_seeds_on_board(const GameState *state) {
 
 int is_valid_move(GameState *state, Move *move) {
     if (move->hole_number < 1 || move->hole_number > 16) return 0;
-    if (move->hole_number % 2 == state->current_player) return 0;
+    if (move->hole_number % 2 == (int)state->current_player) return 0;
     if (state->board[move->hole_number - 1].seeds[move->color] == 0) return 0;
     return 1;
 }
