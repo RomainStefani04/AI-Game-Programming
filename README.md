@@ -1,12 +1,24 @@
 # AI-Game-Programming
 Master informatique Université Côte d'Azur
 
-### Génerer le game.exe
+### Génerer le .exe
 ```
-gcc -o game ./main.c ./game.c ./ai_random.c
+make main
 ```
 
-### Lancer le jeu
+ou si on veut simuler des parties de ai_random
+
 ```
-./game.exe
+make simulation
+```
+
+### Lancer le .exe
+```
+./target/main.exe
+```
+
+ou
+
+```
+./target/simulation.exe
 ```
