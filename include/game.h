@@ -19,7 +19,7 @@ typedef enum {
 typedef enum {
     PLAYER_1 = 0,    // Trous impairs (1,3,5,7,9,11,13,15)
     PLAYER_2 = 1     // Trous pairs (2,4,6,8,10,12,14,16)
-} Player;
+} PlayerIndex;
 
 typedef struct {
     int seeds[NUM_COLORS];
@@ -28,7 +28,7 @@ typedef struct {
 typedef struct {
     Hole board[NUM_HOLES];
     int captures[2];
-    Player current_player;
+    PlayerIndex current_player;
     int turn_number;
 } GameState;
 
@@ -40,7 +40,7 @@ typedef struct {
 
 // Fonctions utilitaires
 int hole_display_number(int internal_index);
-bool is_player_hole(int hole_index, Player player);
+bool is_player_hole(int hole_index, PlayerIndex playerIndex);
 int get_total_seeds_in_hole(const Hole *hole);
 int get_total_seeds_on_board(const GameState *state);
 int is_valid_move(GameState *state, Move *move);

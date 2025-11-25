@@ -1,7 +1,7 @@
 //
 // Created by romai on 24/11/2025.
 //
-#include "ai_random.h"
+#include "../include/ai_random.h"
 #include <stdlib.h>
 #include <time.h>
 

@@ -4,8 +4,13 @@ project(AI_Game_Programming C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(AI_Game_Programming
-        game.h
-        game.c
-        ai_random.c
-        ai_random.h
-        main.c)
+        include/game.h
+        src/game.c
+        player/ai_random.c
+        include/ai_random.h
+        main/main.c
+        player/player.c
+        include/player.h
+        main/simulation.c
+        src/engine.c
+        include/engine.h)
