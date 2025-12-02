@@ -13,4 +13,7 @@ add_executable(AI_Game_Programming
         include/player.h
         main/simulation.c
         src/engine.c
-        include/engine.h)
+        include/engine.h
+        player/ai_minimax.c
+        include/ai_minimax.h
+)

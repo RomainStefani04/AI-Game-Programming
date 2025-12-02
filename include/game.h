@@ -45,6 +45,7 @@ int get_total_seeds_in_hole(const Hole *hole);
 int get_total_seeds_on_board(const GameState *state);
 int is_valid_move(GameState *state, Move *move);
 int generate_legal_moves(const GameState *state, Move *moves);
+int is_game_over(const GameState *state);
 
 // Initialisation
 void init_game_state(GameState *state);

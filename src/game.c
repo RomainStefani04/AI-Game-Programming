@@ -88,6 +88,20 @@ int generate_legal_moves(const GameState *state, Move *moves) {
     return count;
 }
 
+int is_game_over(const GameState *state) {
+    // Vérifie si un joueur a capturé au moins 49 graines (victoire)
+    if (state->captures[PLAYER_1] >= 49 || state->captures[PLAYER_2] >= 49) {
+        return 1;
+    }
+
+    // Vérifie s'il reste moins de 10 graines sur le plateau
+    if (get_total_seeds_on_board(state) < 10) {
+        return 1;
+    }
+
+    return 0;
+}
+
 /*
  * ============================================================================
  * INITIALISATION

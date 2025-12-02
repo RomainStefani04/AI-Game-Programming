@@ -11,11 +11,7 @@ int play_game(Player player1, Player player2, bool display) {
 
     Move move;
 
-    while(1) {
-        if (get_total_seeds_on_board(&state) < 10) {
-            break;
-        }
-
+    while(!is_game_over(&state)) {
         if (display) {
             display_game_state(&state);
         }
@@ -33,10 +29,6 @@ int play_game(Player player1, Player player2, bool display) {
 
         state.captures[state.current_player] += execute_move(&state, &move);
 
-        if (state.captures[state.current_player] >= 49) {
-            break;
-        }
-
         state.current_player = (state.current_player == PLAYER_1) ? PLAYER_2 : PLAYER_1;
         state.turn_number++;
     }
@@ -51,8 +43,10 @@ int play_game(Player player1, Player player2, bool display) {
     if (winner == -1) {
         printf("Match nul!\n");
     } else {
-        printf("Le joueur %d gagne avec %d captures!\n",
-               winner + 1, state.captures[winner]);
+        if (display) {
+            printf("Le joueur %d gagne avec %d captures!\n",
+                   winner + 1, state.captures[winner]);
+        }
     }
 
     return winner;

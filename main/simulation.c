@@ -17,9 +17,7 @@ int main() {
     int draws = 0;
 
     Player player1 = create_ai_random_player();
-    Player player2 = create_ai_random_player();
-
-    printf("=== SIMULATION: %d parties Random vs Random ===\n\n", NUM_GAMES);
+    Player player2 = create_ai_minimax_player();
 
     for (int i = 0; i < NUM_GAMES; i++) {
         int winner = play_game(player1, player2, false);

@@ -7,7 +7,7 @@ PLAYER_DIR = player
 MAIN_DIR = main
 TARGET_DIR = target
 
-SRCS_COMMON = $(SRC_DIR)/game.c $(SRC_DIR)/engine.c $(PLAYER_DIR)/player.c $(PLAYER_DIR)/ai_random.c
+SRCS_COMMON = $(SRC_DIR)/game.c $(SRC_DIR)/engine.c $(PLAYER_DIR)/player.c $(PLAYER_DIR)/ai_random.c $(PLAYER_DIR)/ai_minimax.c
 
 all: main simulation
 
