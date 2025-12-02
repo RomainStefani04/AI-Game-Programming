@@ -4,6 +4,7 @@
 #include "../include/player.h"
 #include "../include/game.h"
 #include "../include/ai_random.h"
+#include "../include/ai_minimax.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -48,3 +49,12 @@ Player create_ai_random_player(void) {
     };
     return p;
 }
+
+Player create_ai_minimax_player(void) {
+    Player p = {
+        .play = ai_minimax_move,
+        .name = "IA Minimax"
+    };
+    return p;
+}
+
