@@ -11,13 +11,13 @@
 int main() {
     srand(time(NULL));
 
-    const int NUM_GAMES = 1000;
+    const int NUM_GAMES = 10;
     int wins_player1 = 0;
     int wins_player2 = 0;
     int draws = 0;
 
-    Player player1 = create_ai_random_player();
-    Player player2 = create_ai_minimax_player();
+    Player player1 = create_ai_alphabeta_player();
+    Player player2 = create_ai_alphabeta_player();
 
     for (int i = 0; i < NUM_GAMES; i++) {
         int winner = play_game(player1, player2, false);

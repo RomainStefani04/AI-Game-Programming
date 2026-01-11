@@ -99,6 +99,10 @@ int is_game_over(const GameState *state) {
         return 1;
     }
 
+    if (state->turn_number > 400) {
+        return 1;
+    }
+
     return 0;
 }
 

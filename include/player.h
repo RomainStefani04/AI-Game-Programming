@@ -17,6 +17,8 @@ typedef struct {
 Player create_human_player(void);
 Player create_ai_random_player(void);
 Player create_ai_minimax_player(void);
+Player create_ai_alphabeta_player(void);
+Player create_ai_alphabeta_nul_player(void);
 
 // Fonction de jeu pour humain
 void human_play(const GameState *state, Move *selected_move);
