@@ -7,6 +7,6 @@
 
 #include "game.h"
 
-void ai_alphabeta_move(const GameState *state, Move *selected_move);
+void ai_alpha_beta_move(const GameState *state, Move *selected_move);
 
 #endif //AI_ALPHA_BETA_H

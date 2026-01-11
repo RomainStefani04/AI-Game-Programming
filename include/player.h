@@ -1,6 +1,3 @@
-//
-// Created by romai on 25/11/2025.
-//
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -13,14 +10,16 @@ typedef struct {
     const char *name;
 } Player;
 
-// Fonction pour créer des joueurs
 Player create_human_player(void);
 Player create_ai_random_player(void);
 Player create_ai_minimax_player(void);
+Player create_ai_alpha_beta_player(void);
 Player create_ai_alphabeta_player(void);
-Player create_ai_alphabeta_nul_player(void);
+Player create_ai_pvs_player(void);
+Player create_ai_pvs_v2_player(void);
+Player create_ai_mtdf_player(void);
+Player create_ai_aspiration_player(void);
 
-// Fonction de jeu pour humain
 void human_play(const GameState *state, Move *selected_move);
 
-#endif //PLAYER_H
+#endif

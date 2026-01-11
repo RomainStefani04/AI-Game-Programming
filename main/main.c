@@ -38,8 +38,8 @@ int main() {
             player2 = create_human_player();
             break;
         case 4:
-            player1 = create_ai_alphabeta_nul_player();
-            player2 = create_ai_alphabeta_player();
+            player1 = create_ai_pvs_player();
+            player2 = create_ai_pvs_v2_player();
             break;
         default:
             printf("Choix invalide!\n");
