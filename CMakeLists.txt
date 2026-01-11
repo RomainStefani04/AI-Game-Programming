@@ -19,6 +19,12 @@ add_executable(AI_Game_Programming
         main/external_player.c
         player/ai_alpha_beta.c
         include/ai_alpha_beta.h
-        player/ai_alpha_beta_nul.c
-        include/ai_alpha_beta_nul.h
+        player/ai_pvs_v2.c
+        include/ai_pvs_v2.h
+        player/ai_alphabeta.c
+        src/ai_common.c
+        player/ai_pvs.c
+        player/ai_mtdf.c
+        player/ai_aspiration.c
+        main/tournament.c
 )
