@@ -14,7 +14,7 @@ int main() {
     printf("1. Humain vs Humain\n");
     printf("2. Humain vs IA Random\n");
     printf("3. IA Random vs Humain\n");
-    printf("4. IA Random vs IA Random\n");
+    printf("4. IA vs IA\n");
     printf("\nVotre choix: ");
 
     if (scanf("%d", &choice) != 1) {
@@ -38,8 +38,8 @@ int main() {
             player2 = create_human_player();
             break;
         case 4:
-            player1 = create_ai_random_player();
-            player2 = create_ai_random_player();
+            player1 = create_ai_alphabeta_nul_player();
+            player2 = create_ai_alphabeta_player();
             break;
         default:
             printf("Choix invalide!\n");

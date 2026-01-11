@@ -16,4 +16,9 @@ add_executable(AI_Game_Programming
         include/engine.h
         player/ai_minimax.c
         include/ai_minimax.h
+        main/external_player.c
+        player/ai_alpha_beta.c
+        include/ai_alpha_beta.h
+        player/ai_alpha_beta_nul.c
+        include/ai_alpha_beta_nul.h
 )
