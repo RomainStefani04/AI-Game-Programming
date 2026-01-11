@@ -34,8 +34,8 @@ int main() {
             player2 = create_ai_random_player();
             break;
         case 3:
-            player1 = create_ai_random_player();
-            player2 = create_human_player();
+            player1 = create_ai_pvs_v2_player();
+            player2 = create_ai_pvs_player();
             break;
         case 4:
             player1 = create_ai_pvs_player();

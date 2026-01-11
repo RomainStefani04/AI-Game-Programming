@@ -98,7 +98,7 @@ int main(int argc, char* argv[]) {
     init_game_state(&state);
 
     // Créer notre IA
-    Player our_ai = create_ai_random_player();
+    Player our_ai = create_ai_pvs_player();
 
     // Buffer pour lecture
     char input_line[256];

@@ -188,9 +188,9 @@ void ai_pvs_move(const GameState *state, Move *selected_move) {
         if (!time_exceeded) { best_score = curr_best; best = curr_move; completed = depth; }
     }
 
-    printf("[PVS] depth=%d score=%d nodes=%d tt=%d cuts=%d re-search=%d time=%ldms\n",
-           completed, best_score, nodes, tt_hits, cutoffs, re_searches,
-           (clock() - start_time) * 1000 / CLOCKS_PER_SEC);
+    // printf("[PVS] depth=%d score=%d nodes=%d tt=%d cuts=%d re-search=%d time=%ldms\n",
+    //        completed, best_score, nodes, tt_hits, cutoffs, re_searches,
+    //        (clock() - start_time) * 1000 / CLOCKS_PER_SEC);
 
     *selected_move = best;
 }
