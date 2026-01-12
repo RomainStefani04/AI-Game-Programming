@@ -18,6 +18,8 @@ IA pour la Compétition
 
 (Les autres ia ont été utilisé pour tester des méthodes ou pour faire des compétitions internes mais sont moins efficaces)
 
+**Fonction d'Évaluation :** Score basé sur la différence de captures (×100) et la différence de graines restantes sur le plateau. On pénalise nos trous à 1 graine (vulnérables : l'adversaire peut les amener à 2-3 graines et les capturer), et on valorise les trous adverses à 1 graine (faciles à capturer en les amenant à 2-3) et ceux déjà à 2-3 graines (capturables si on termine notre sowing dessus). Bonus additionnel en fin de partie quand on a l'avantage en captures.
+
 # Utilisation
 
 ### Pour utiliser nos tests à nous : main, simulation, tournament
