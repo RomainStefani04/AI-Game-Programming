@@ -13,8 +13,8 @@ int main() {
     printf("Choisissez le mode de jeu:\n");
     printf("1. Humain vs Humain\n");
     printf("2. Humain vs IA Random\n");
-    printf("3. IA Random vs Humain\n");
-    printf("4. IA vs IA\n");
+    printf("3. IA vs IA\n");
+    printf("4. IA vs IA (changement de l'ordre des joueurs)\n");
     printf("\nVotre choix: ");
 
     if (scanf("%d", &choice) != 1) {
