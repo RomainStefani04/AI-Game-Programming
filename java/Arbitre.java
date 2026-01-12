@@ -7,7 +7,7 @@ public class Arbitre {
     private static final int TIMEOUT_SECONDS = 3;
 
     public static void main(String[] args) throws Exception {
-        Process A = Runtime.getRuntime().exec("C:\\Users\\romai\\Documents\\Romain\\Master Info\\AI Game Programming\\AI-Game-Programming\\target\\external_player_v2.exe JoueurA");
+        Process A = Runtime.getRuntime().exec("C:\\Users\\romai\\Documents\\Romain\\Master Info\\AI Game Programming\\AI-Game-Programming\\target\\external_player.exe JoueurA");
         //        Process A = new ProcessBuilder("./A").start();
         // Pour lancer un code java COMPILE : voir https://www.baeldung.com/java-process-api
         // process = Runtime.getRuntime().exec("java -cp src/main/java com.baeldung.java9.process.OutputStreamExample");
