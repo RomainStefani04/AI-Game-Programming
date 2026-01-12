@@ -6,8 +6,15 @@ Master informatique Université Côte d'Azur
 - Guillaume FAURE
 
 # IA pour la compétition
-PVS 
+IA pour la Compétition
 
+**PVS (Principal Variation Search) :** Variante d'Alpha-Beta qui explore le premier coup normalement, puis teste les autres avec une fenêtre quasi-nulle [alpha, alpha+1] pour les éliminer rapidement. Si un coup dépasse, on le re-recherche avec la fenêtre complète.
+
+**Killer Moves :** On mémorise les 2 derniers coups qui ont causé une coupure à chaque profondeur, et on les explore en priorité dans les positions similaires. Un coup qui a coupé ailleurs a de bonnes chances de couper ici aussi.
+
+**Table de Transposition :** Cache de positions avec leur score, profondeur et meilleur coup. Quand on retombe sur une position déjà vue, on réutilise le résultat au lieu de tout recalculer.
+
+**Iterative Deepening :** On recherche à profondeur 1, puis 2, puis 3... jusqu'au timeout (3s). Garantit un coup légal même si interrompu.
 
 (Les autres ia ont été utilisé pour tester des méthodes ou pour faire des compétitions internes mais sont moins efficaces)
 
