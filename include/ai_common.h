@@ -6,7 +6,7 @@
 
 #define MAX_DEPTH 50
 #define WIN_SCORE 100000
-#define TIME_LIMIT_MS 2000
+#define TIME_LIMIT_MS 3000
 #define HASH_SIZE 1048576
 
 #define TT_EXACT 0
