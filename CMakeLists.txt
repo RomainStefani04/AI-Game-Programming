@@ -27,4 +27,5 @@ add_executable(AI_Game_Programming
         player/ai_mtdf.c
         player/ai_aspiration.c
         main/tournament.c
+        main/replay_game.c
 )

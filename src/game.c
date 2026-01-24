@@ -252,6 +252,12 @@ int execute_move(GameState *state, Move *move) {
     int indexHole = (hole_index + 1) % NUM_HOLES;
 
     while(nbSeedsTransparent + nbSeeds > 0) {
+        if (indexHole == hole_index) {
+            // Sauter le trou de départ
+            indexHole = (indexHole + (color == RED ? 1 : 2)) % NUM_HOLES;
+            continue;
+        }
+
         // Déposer une graine
         if (nbSeedsTransparent > 0) {
             state->board[indexHole].seeds[TRANSPARENT]++;
@@ -277,6 +283,7 @@ int execute_move(GameState *state, Move *move) {
             seedsCaptured += totalSeedsHole;
             state->board[indexHole].seeds[RED] = 0;
             state->board[indexHole].seeds[BLUE] = 0;
+            state->board[indexHole].seeds[TRANSPARENT] = 0;
             indexHole = (indexHole - 1 + NUM_HOLES) % NUM_HOLES;
         } else {
             break;

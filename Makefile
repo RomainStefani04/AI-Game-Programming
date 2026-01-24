@@ -16,6 +16,10 @@ all: main simulation external
 main: $(SRCS_COMMON) $(MAIN_DIR)/main.c
 	$(CC) $(CFLAGS) $(IFLAGS) -o $(TARGET_DIR)/main $(SRCS_COMMON) $(MAIN_DIR)/main.c
 
+replay: $(SRCS_COMMON) $(MAIN_DIR)/replay_game.c
+	$(CC) $(CFLAGS) $(IFLAGS) -o $(TARGET_DIR)/replay_game $(SRCS_COMMON) $(MAIN_DIR)/replay_game.c
+
+
 simulation: $(SRCS_COMMON) $(MAIN_DIR)/simulation.c
 	$(CC) $(CFLAGS) $(IFLAGS) -o $(TARGET_DIR)/simulation $(SRCS_COMMON) $(MAIN_DIR)/simulation.c
 
